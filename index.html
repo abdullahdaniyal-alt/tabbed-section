@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tabbed Content Section</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header class="hero">
+      <span class="tag">About us</span>
+      <h1>Pixel &amp; Code Studio</h1>
+      <p>We design and build fast, accessible websites for growing brands.</p>
+    </header>
+
+    <div class="tablist" role="tablist" aria-label="Company information">
+      <button class="tab" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" tabindex="0"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Overview</span></button>
+      <button class="tab" role="tab" id="tab-info" aria-controls="panel-info" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Info</span></button>
+      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg><span>Contact</span></button>
+      <span class="indicator" id="indicator" aria-hidden="true"></span>
+    </div>
+
+    <div class="panels" id="panels">
+      <section class="panel active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+        <h2>Who we are</h2>
+        <p>Pixel &amp; Code Studio is a small team of designers and developers. We turn ideas into clean, responsive websites and web apps, from the first sketch to launch day and beyond.</p>
+        <div class="stats">
+          <div class="stat"><b>120+</b><span>Projects delivered</span></div>
+          <div class="stat"><b>8</b><span>Years of experience</span></div>
+          <div class="stat"><b>98%</b><span>Happy clients</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-info" role="tabpanel" aria-labelledby="tab-info" hidden>
+        <h2>Company details</h2>
+        <p>A quick look at the facts about our studio.</p>
+        <div class="info">
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><small>Founded</small><span>2018</span></div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.900 1.900 6.500 5.500M16 4.800a3.500 3.500 0 0 1 0 6.400M18 14.800c1.800.8 3 2.600 3.500 5.200"/></svg></span><div><small>Team size</small><span>12 people</span></div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span><div><small>Services</small><span>Web design, front-end and back-end development</span></div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.200 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg></span><div><small>Working mode</small><span>Remote-first, clients worldwide</span></div></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+        <h2>Get in touch</h2>
+        <p>Tell us about your project and we will reply within one business day.</p>
+        <div class="contact" id="contactBox">
+          <div class="info">
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span><div><small>Email</small><span>hello@pixelcode.studio</span></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><small>Phone</small><span>+1 (555) 012-3456</span></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Office</small><span>12 Market Street, Remote HQ</span></div></div>
+          </div>
+          <div>
+            <div class="formbox">
+              <div class="field"><label for="cName">Name</label><input id="cName" type="text" placeholder="Your name" autocomplete="name"><div class="err">Please enter your name.</div></div>
+              <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email" placeholder="you@example.com" autocomplete="email"><div class="err">Please enter a valid email.</div></div>
+              <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" placeholder="How can we help?"></textarea><div class="err">Please write a message.</div></div>
+              <button class="btn" id="sendBtn" type="button">Send message</button>
+            </div>
+            <div class="sent"><div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg></div><h3>Message sent</h3><p>Thanks for reaching out. We will be in touch soon.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
